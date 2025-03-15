@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- Declaración del tipo de documento (HTML5) -->
+<html lang="es">
+<!-- Etiqueta raíz del documento, con el atributo lang para indicar el idioma (español) -->
+
+<head>
+  <!-- Encabezado del documento, contiene metadatos y enlaces a recursos externos -->
+  <meta charset="UTF-8">
+  <!-- Especifica la codificación de caracteres (UTF-8 para soportar caracteres especiales) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Configura la vista para dispositivos móviles (ajusta el ancho al dispositivo) -->
+  <title>Quiz de Programación</title>
+  <!-- Título de la página que aparece en la pestaña del navegador -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Enlace al archivo CSS para estilos de la página -->
+</head>
+
+<body>
+  <!-- Cuerpo del documento, contiene todo el contenido visible de la página -->
+
+  <!-- Pantalla de inicio -->
+  <div id="start-screen" class="container">
+    <!-- Contenedor principal de la pantalla de inicio -->
+    <h1>CodeQuest</h1>
+    <!-- Título principal del juego -->
+    <p>¡Demuestra tus conocimientos de programación!</p>
+    <!-- Descripción o mensaje de bienvenida -->
+    <button id="start-button">Comenzar</button>
+    <!-- Botón para iniciar el juego -->
+    <div id="leaderboard">
+      <!-- Contenedor del Leaderboard (tabla de clasificación) -->
+      <h2>Mejores Puntuaciones</h2>
+      <!-- Título del Leaderboard -->
+      <ol id="leaderboard-list"></ol>
+      <!-- Lista ordenada (ol) donde se mostrarán las mejores puntuaciones -->
+    </div>
+  </div>
+
+  <!-- Pantalla del juego -->
+  <div id="game-screen" class="container">
+    <!-- Contenedor principal de la pantalla del juego -->
+    <h1>CodeQuest</h1>
+    <!-- Título del juego (visible durante la partida) -->
+    <div id="question-container">
+      <!-- Contenedor de la pregunta y opciones -->
+      <p id="question"></p>
+      <!-- Párrafo donde se mostrará la pregunta actual -->
+      <div id="options" class="options">
+        <!-- Contenedor de las opciones de respuesta (se generan dinámicamente) -->
+        <!-- Las opciones se añaden aquí mediante JavaScript -->
+      </div>
+    </div>
+    <div id="timer">Tiempo restante: <span id="time">10</span>s</div>
+    <!-- Contenedor del temporizador, muestra el tiempo restante -->
+    <div id="score">Puntuación: <span id="points">0</span></div>
+    <!-- Contenedor de la puntuación, muestra el puntaje actual -->
+    <button id="exit-button">Salir</button>
+    <!-- Botón para salir del juego en cualquier momento -->
+  </div>
+
+  <!-- Enlace al archivo JavaScript -->
+  <script src="script.js"></script>
+  <!-- Incluye el archivo JavaScript que contiene la lógica del juego -->
+</body>
+
+</html>

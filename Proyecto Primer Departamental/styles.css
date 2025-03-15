@@ -1,0 +1,139 @@
+/* Estilos generales del cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Fuente principal del texto */
+    background-color: #f4f4f4; /* Color de fondo de la página */
+    display: flex; /* Usa Flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Altura completa de la ventana del navegador */
+    margin: 0; /* Elimina el margen predeterminado */
+  }
+  
+  /* Estilos del contenedor principal */
+  .container {
+    background: white; /* Fondo blanco para el contenedor */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Alinea el texto al centro */
+    width: 90%; /* Ancho del contenedor (90% del padre) */
+    max-width: 500px; /* Ancho máximo del contenedor */
+  }
+  
+  /* Estilos del contenedor de opciones (botones de respuesta) */
+  .options {
+    display: flex; /* Usa Flexbox para organizar los botones */
+    flex-direction: column; /* Apila los botones verticalmente */
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: 20px; /* Margen superior */
+  }
+  
+  /* Estilos base para los botones */
+  button {
+    padding: 10px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+    border: none; /* Elimina el borde predeterminado */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #007bff; /* Color de fondo azul */
+    color: white; /* Color del texto */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+  }
+  
+  /* Efecto al pasar el mouse sobre los botones */
+  button:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
+    transform: scale(1.05); /* Escala ligeramente el botón */
+  }
+  
+  /* Estilos para el temporizador y la puntuación */
+  #timer, #score {
+    margin-top: 20px; /* Margen superior */
+    font-size: 18px; /* Tamaño de la fuente */
+  }
+  
+  /* Estilos de la pantalla de inicio */
+  #start-screen {
+    display: flex; /* Usa Flexbox para organizar el contenido */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    animation: fadeIn 1s ease; /* Aplica una animación de entrada */
+  }
+  
+  /* Estilos del botón "Comenzar" */
+  #start-button {
+    margin-top: 20px; /* Margen superior */
+  }
+  
+  /* Efecto al pasar el mouse sobre el botón "Comenzar" */
+  #start-button:hover {
+    transform: scale(1.1); /* Escala ligeramente el botón */
+  }
+  
+  /* Animación de entrada (fadeIn) */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); } /* Inicia invisible y desplazado hacia arriba */
+    to { opacity: 1; transform: translateY(0); } /* Termina visible y en su posición original */
+  }
+  
+  /* Animación de pulso (para el temporizador) */
+  @keyframes pulse {
+    0% { transform: scale(1); } /* Tamaño normal */
+    50% { transform: scale(1.1); } /* Escala ligeramente */
+    100% { transform: scale(1); } /* Vuelve al tamaño normal */
+  }
+  
+  /* Clase para aplicar la animación de pulso */
+  .pulse {
+    animation: pulse 1s infinite; /* Aplica la animación de pulso de forma infinita */
+    color: #f44336; /* Color rojo para el texto */
+  }
+  
+  /* Clase para respuestas correctas */
+  .correct {
+    background-color: #4caf50 !important; /* Fondo verde para respuestas correctas */
+  }
+  
+  /* Clase para respuestas incorrectas */
+  .incorrect {
+    background-color: #f44336 !important; /* Fondo rojo para respuestas incorrectas */
+  }
+  
+  /* Contenedor de la pregunta (para transiciones) */
+  #question-container {
+    transition: opacity 0.5s ease; /* Transición suave de opacidad */
+  }
+  
+  /* Clase para aplicar un efecto de desvanecimiento */
+  .fade-out {
+    opacity: 0; /* Hace el contenido invisible */
+  }
+  
+  /* Estilos del Leaderboard (tabla de clasificación) */
+  #leaderboard {
+    margin-top: 20px; /* Margen superior */
+    text-align: left; /* Alinea el texto a la izquierda */
+  }
+  
+  /* Estilos de la lista del Leaderboard */
+  #leaderboard-list {
+    list-style-type: decimal; /* Usa números para los elementos de la lista */
+    padding-left: 20px; /* Espaciado interno a la izquierda */
+  }
+  
+  /* Estilos de los elementos de la lista del Leaderboard */
+  #leaderboard-list li {
+    margin: 5px 0; /* Margen entre elementos */
+    font-size: 16px; /* Tamaño de la fuente */
+  }
+  
+  /* Estilos del botón "Salir" */
+  #exit-button {
+    background-color: #f44336; /* Fondo rojo */
+    margin-top: 20px; /* Margen superior */
+  }
+  
+  /* Efecto al pasar el mouse sobre el botón "Salir" */
+  #exit-button:hover {
+    background-color: #d32f2f; /* Cambia el color de fondo al pasar el mouse */
+  }
